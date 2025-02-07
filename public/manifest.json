@@ -4,8 +4,13 @@
   "description": "AI-Powered Mock Interview Platform",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "prefer_related_applications": false,
+  "categories": ["education", "productivity"],
+  "id": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "pwa-64x64.png",
@@ -42,6 +47,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Interview",
+      "short_name": "Interview",
+      "description": "Start a mock interview session",
+      "url": "/mock-interview-page",
+      "icons": [{ "src": "pwa-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
