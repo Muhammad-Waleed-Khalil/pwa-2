@@ -1,0 +1,218 @@
+# Website Documentation
+
+## 1. Project Structure
+
+The project has the following directory structure:
+
+```
+.
+├── .firebaserc
+├── .gitignore
+├── components.json
+├── eslint.config.js
+├── firebase.json
+├── index.html
+├── package-lock.json
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── question_bank.json
+├── README.md
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   ├── favicon.svg
+│   ├── assets/
+│   │   ├── img/
+│   │   │   ├── bg.png
+│   │   │   ├── hero_section.jpeg
+│   │   │   └── logo/
+│   │   │       ├── firebase.png
+│   │   │       ├── meet.png
+│   │   │       ├── microsoft.png
+│   │   │       ├── react.png
+│   │   │       ├── tailwindcss.png
+│   │   │       ├── zoom.png
+│   │   ├── svg/
+│   │   │   ├── logo.svg
+│   │   │   ├── not-found.svg
+│   │   └── vite.svg
+│   └── pdf-worker/
+└── src/
+    ├── App.tsx
+    ├── index.css
+    ├── main.tsx
+    ├── vite-env.d.ts
+    ├── assets/
+    │   └── react.svg
+    ├── components/
+    │   ├── container.tsx
+    │   ├── custom-bread-crumb.tsx
+    │   ├── cv-upload.tsx
+    │   ├── footer.tsx
+    │   ├── form-mock-interview.tsx
+    │   ├── generate.tsx
+    │   ├── header.tsx
+    │   ├── headings.tsx
+    │   ├── logo-container.tsx
+    │   ├── marquee-img.tsx
+    │   ├── modal.tsx
+    │   ├── navigation-routes.tsx
+    │   ├── pin.tsx
+    │   ├── profile-container.tsx
+    │   ├── question-section.tsx
+    │   ├── record-answer.tsx
+    │   ├── save-modal.tsx
+    │   ├── toggle-container.tsx
+    │   ├── tooltip-button.tsx
+    │   └── ui/
+    │       ├── accordion.tsx
+    │       ├── alert.tsx
+    │       ├── badge.tsx
+    │       ├── breadcrumb.tsx
+    │       ├── button.tsx
+    │       ├── card.tsx
+    │       ├── dialog.tsx
+    │       ├── form.tsx
+    │       ├── input.tsx
+    │       ├── label.tsx
+    │       ├── separator.tsx
+    │       ├── sheet.tsx
+    │       ├── skeleton.tsx
+    │       ├── sonner.tsx
+    │       ├── tabs.tsx
+    │       ├── textarea.tsx
+    │       └── tooltip.tsx
+    ├── config/
+    │   └── firebase.config.ts
+    ├── handlers/
+    │   └── auth-handler.tsx
+    ├── layouts/
+    │   ├── auth-layout.tsx
+    │   ├── main-layout.tsx
+    │   ├── protected-routes.tsx
+    │   └── public-layout.tsx
+    ├── lib/
+    │   ├── helpers.ts
+    │   └── utils.ts
+    ├── provider/
+    │   └── toast-provider.tsx
+    ├── routes/
+    │   ├── contact.tsx
+    │   ├── create-edit-page.tsx
+    │   ├── dashboard.tsx
+    │   ├── feedback.tsx
+    │   ├── home.tsx
+    │   ├── loader-page.tsx
+    │   ├── mission.tsx
+    │   ├── mock-interview-page.tsx
+    │   ├── mock-load-page.tsx
+    │   ├── sign-in.tsx
+    │   ├── sign-up.tsx
+    │   └── website-feedback.tsx
+    ├── scripts/
+    │   └── index.ts
+    └── types/
+        └── index.ts
+```
+
+## 2. Components
+
+The `src/components` directory contains the following React components:
+
+- container.tsx: Likely a layout component for consistent content wrapping.
+- custom-bread-crumb.tsx: A custom breadcrumb component for navigation.
+- cv-upload.tsx: Handles CV/Resume uploading functionality.
+- footer.tsx: The website's footer component.
+- form-mock-interview.tsx: A form related to mock interview features.
+- generate.tsx: Likely generates some content, possibly questions or feedback.
+- header.tsx: The website's header component.
+- headings.tsx: Probably provides reusable heading components.
+- logo-container.tsx: A container for displaying logos.
+- marquee-img.tsx: Displays images in a marquee (scrolling) format.
+- modal.tsx: A generic modal component.
+- navigation-routes.tsx: Manages navigation routes, possibly with links.
+- pin.tsx: Likely handles a PIN input or display.
+- profile-container.tsx: Displays user profile information.
+- question-section.tsx: Displays a section for questions, possibly in an interview context.
+- record-answer.tsx: Allows recording answers, likely audio or video.
+- save-modal.tsx: A modal for saving data or progress.
+- toggle-container.tsx: A container for toggle switches or similar controls.
+- tooltip-button.tsx: A button with tooltip functionality.
+- ui/: This subdirectory contains UI components built with Shadcn/ui:
+    - accordion.tsx: An accordion component for collapsible content.
+    - alert.tsx: Displays alert messages.
+    - badge.tsx: Displays small badges or labels.
+    - breadcrumb.tsx: Another breadcrumb component (possibly a base for `custom-bread-crumb.tsx`).
+    - button.tsx: A customizable button component.
+    - card.tsx: A card component for displaying content.
+    - dialog.tsx: A dialog (modal) component.
+    - form.tsx: Provides form elements and handling.
+    - input.tsx: A text input field.
+    - label.tsx: A label for form elements.
+    - separator.tsx: A visual separator.
+    - sheet.tsx: A sheet component (likely a bottom sheet).
+    - skeleton.tsx: Displays placeholder skeletons while content loads.
+    - sonner.tsx: Integration with the Sonner library (likely for notifications).
+    - tabs.tsx: A tabbed interface component.
+    - textarea.tsx: A multi-line text input area.
+    - tooltip.tsx: A tooltip component (possibly a base for `tooltip-button.tsx`).
+
+## 3. Routes
+
+The `src/routes` directory defines the following website pages:
+
+- contact.tsx: A contact form or contact information page.
+- create-edit-page.tsx: A page for creating or editing content.
+- dashboard.tsx: A user dashboard, likely requiring authentication.
+- feedback.tsx: A page for providing feedback.
+- home.tsx: The website's homepage.
+- loader-page.tsx: A loading page displayed during transitions or data fetching.
+- mission.tsx: A page describing the website's mission or purpose.
+- mock-interview-page.tsx: The main page for the mock interview feature.
+- mock-load-page.tsx: Likely a loading page specifically for mock interviews.
+- sign-in.tsx: The user sign-in page.
+- sign-up.tsx: The user sign-up page.
+- website-feedback.tsx: A page specifically for feedback about the website itself.
+
+## 4. Handlers
+
+- src/handlers/auth-handler.tsx: This file handles user authentication logic, likely interacting with Firebase (based on other files).
+
+## 5. Configuration
+
+- tailwind.config.js: Configuration file for Tailwind CSS.
+- vite.config.ts: Configuration file for Vite, the build tool.
+- firebase.json: Configuration for Firebase hosting and deployment.
+- tsconfig.*.json: TypeScript configuration files.
+- components.json: Likely related to Shadcn/ui component configuration.
+- .firebaserc: Specifies Firebase project settings.
+
+## 6. Utilities and Helpers
+
+- **src/lib/helpers.ts:** Contains helper functions used throughout the application.
+- **src/lib/utils.ts:** Contains utility functions.
+
+## 7. Dependencies
+
+Key dependencies (from `package.json`, not included in full for brevity) likely include:
+
+- React
+- Vite
+- Tailwind CSS
+- Shadcn/ui
+- Firebase
+
+## 8. Overall Functionality
+
+This website appears to be a platform for practicing mock interviews. Key features include:
+
+- User authentication (sign-up, sign-in).
+- CV/Resume upload.
+- Mock interview practice, potentially with audio/video recording.
+- Feedback mechanisms.
+- A dashboard for users.
+- Informational pages (home, mission, contact).
